@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>index page</title>
+</head>
+<body>
+<div class="container">
+    <h1>Enter cat's name</h1>
+{#    <a href="/article/add">Add Article</a>#}
+    <form action="article/add/" method="POST">
+    {% csrf_token %}
+        <input type="text" name = "name">
+{#        <input type="text" name = "second" value="{{ second }}">#}
+{#        <p>Result: {{ result }}</p>#}
+        <input type="submit" value="send">
+    </form>
+{#    <input type="submit" href="/article/add">#}
+</div>
+</body>
+</html>
