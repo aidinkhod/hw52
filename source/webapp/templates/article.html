@@ -4,25 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <title>Cat</title>
+    <title>Article</title>
 </head>
 <body>
-<div>
-    <h1>Cat</h1>
-    <form action="article/add/" method="GET">
-    {% csrf_token %}
-    <p>Name: {{ name }}</p>
-    <p>Age: {{ age }}</p>
-    <p>happiness_level: {{ happiness_level }}</p>
-    <p>fullness_level: {{ fullness_level }}</p>
-    <select>
-      <option>play</option>
-      <option>feed</option>
-      <option>sleep</option>
-        <input type="submit" value="send">
-
-    </select>
-    </form>
-</div>
+    <h1>Article</h1>
+    <p><a href="/">На главную</a></p>
+    <p>Title: {{ article.title }}</p>
+    <p>Text: {{ article.text }}</p>
+    <p>Author: {{ article.author }}</p>
 </body>
 </html>
